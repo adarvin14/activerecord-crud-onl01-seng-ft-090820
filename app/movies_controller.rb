@@ -12,6 +12,7 @@
 
 # end                              # end
 
+<<<<<<< HEAD
  
 
 def can_be_instantiated_and_then_saved #create a new instance of a movie and save it
@@ -22,6 +23,12 @@ def can_be_instantiated_and_then_saved #create a new instance of a movie and sav
 
   movie.save
 
+=======
+def can_be_instantiated_and_then_saved #create a new instance of a movie and save it
+  movie = Movie.new
+  movie.title = "This is a title."
+  movie.save
+>>>>>>> 000bc253ff8e5da19f1050a61b3f8e918ef416bd
 end
 
  
@@ -43,6 +50,7 @@ def can_be_created_with_a_hash_of_attributes
       in_theaters: false
 
   }
+<<<<<<< HEAD
 
   movie = Movie.create(attributes)
 
@@ -52,6 +60,12 @@ end
 
 def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990}) #arguments are title: title name and release date: release date; must be a hash to contain multiple keys and values
 
+=======
+  movie = Movie.create(attributes)
+end
+
+def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990}) #arguments are title: title name and release date: release date; must be a hash to contain multiple keys and values
+>>>>>>> 000bc253ff8e5da19f1050a61b3f8e918ef416bd
   # If no arguments are passed, use default values:
 
   # title == "Home Alone"
@@ -61,6 +75,7 @@ def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990}) 
  
 
   Movie.create do |m|
+<<<<<<< HEAD
 
     m.title = args[:title]
 
@@ -68,29 +83,44 @@ def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990}) 
 
     m.save
 
+=======
+    movie.title = args[:title]
+    movie.release_date = args[:release_date]
+    movie.save
+>>>>>>> 000bc253ff8e5da19f1050a61b3f8e918ef416bd
   end
 
 end
 
+<<<<<<< HEAD
  
 
 def can_get_the_first_item_in_the_database #Not an instance of a movie but the entire database; has to be movie class
 
   Movie.first
 
+=======
+def can_get_the_first_item_in_the_database #Not an instance of a movie but the entire database; has to be movie class
+  Movie.first
+>>>>>>> 000bc253ff8e5da19f1050a61b3f8e918ef416bd
 end
 
  
 
 def can_get_the_last_item_in_the_database
+<<<<<<< HEAD
 
   Movie.last
 
+=======
+  Movie.last
+>>>>>>> 000bc253ff8e5da19f1050a61b3f8e918ef416bd
 end
 
  
 
 def can_get_size_of_the_database
+<<<<<<< HEAD
 
   Movie.all.length
 
@@ -102,6 +132,13 @@ def can_find_the_first_item_from_the_database_using_id #find using id, not index
 
   Movie.find(1)
 
+=======
+  Movie.all.length
+end
+
+def can_find_the_first_item_from_the_database_using_id #find using id, not index
+  Movie.find(1)
+>>>>>>> 000bc253ff8e5da19f1050a61b3f8e918ef416bd
 end
 
  
@@ -115,6 +152,7 @@ def can_find_by_multiple_attributes
   # release_date == 2000
 
   # director == "Me"
+<<<<<<< HEAD
 
   Movie.find_by(title: "Title")
 
@@ -122,6 +160,11 @@ def can_find_by_multiple_attributes
 
   Movie.find_by(director: "Me")
 
+=======
+  Movie.find_by(title: "Title")
+  Movie.find_by(release_date: 2000)
+  Movie.find_by(director: "Me")
+>>>>>>> 000bc253ff8e5da19f1050a61b3f8e918ef416bd
 end
 
  
@@ -131,9 +174,13 @@ def can_find_using_where_clause_and_be_sorted
   # For this test return all movies released after 2002 and ordered by
 
   # release date descending
+<<<<<<< HEAD
 
   movie = Movie.where("release_date > 2002").order(release_date: :desc)
 
+=======
+  movie = Movie.where(release_date > 2002).order(release_date: :desc)
+>>>>>>> 000bc253ff8e5da19f1050a61b3f8e918ef416bd
 end
 
  

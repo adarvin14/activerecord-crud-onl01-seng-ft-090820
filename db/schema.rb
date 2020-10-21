@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_10_21_142016) do
 
   create_table "movies", force: :cascade do |t|
@@ -19,5 +20,8 @@ ActiveRecord::Schema.define(version: 2020_10_21_142016) do
     t.string "lead"
     t.boolean "in_theaters"
   end
+=======
+ActiveRecord::Schema.define(version: 0) do
+>>>>>>> 000bc253ff8e5da19f1050a61b3f8e918ef416bd
 
 end
